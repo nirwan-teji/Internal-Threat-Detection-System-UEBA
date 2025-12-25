@@ -39,4 +39,26 @@ UEBA focuses on **learning normal behavior patterns** and flagging deviations, e
 ---
 
 ## 🏗️ High-Level Architecture
+      ┌──────────────────────┐
+      │   Log Sources        │
+      │ (Syslog, App Logs)   │
+      └─────────┬────────────┘
+                ↓
+      ┌──────────────────────┐
+      │  Ingestion API       │   <-- Scripts/Jobs
+      │  (Python / FastAPI)  │
+      └─────────┬────────────┘
+                ↓
+      ┌──────────────────────┐
+      │   Feature Extractor   │  <-- Scripts in /scripts
+      └─────────┬────────────┘
+                ↓
+      ┌──────────────────────┐
+      │   Analytics Engine   │  (Python models, scoring)
+      └─────────┬────────────┘
+                ↓
+      ┌──────────────────────┐
+      │   Dashboard (UI)     │  (Web frontend)
+      └──────────────────────┘
+
 
