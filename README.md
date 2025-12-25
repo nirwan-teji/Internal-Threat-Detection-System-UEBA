@@ -61,4 +61,62 @@ UEBA focuses on **learning normal behavior patterns** and flagging deviations, e
       │   Dashboard (UI)     │  (Web frontend)
       └──────────────────────┘
 
+---
+
+## 📂 Repository Structure
+
+Internal-Threat-Detection-System-UEBA/
+├── api/ # Backend APIs (log ingestion, querying, alerts)
+├── artifacts/ # Saved models, scalers, and experiment outputs
+├── scripts/ # Data processing, feature generation scripts
+├── src/ # Core analytics, ML models, and detection logic
+├── ui/ # Frontend dashboard (JS/HTML/SCSS)
+├── .gitignore
+├── LICENSE
+└── README.md
+
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend & Analytics
+- Python
+- pandas, numpy
+- scikit-learn (e.g., Isolation Forest, anomaly models)
+- FastAPI / Flask (API layer)
+
+### Frontend
+- JavaScript
+- HTML / SCSS
+- Web dashboard for analysis & visualization
+
+---
+
+## ⚙️ Installation
+
+### Prerequisites
+- Python 3.8+
+- Node.js & npm
+- Git
+
+### Clone Repository
+```bash
+git clone https://github.com/nirwan-teji/Internal-Threat-Detection-System-UEBA.git
+cd Internal-Threat-Detection-System-UEBA
+
+ 
+### BACKEND SETUP
+python -m venv venv
+source venv/bin/activate   # Linux / macOS
+# venv\Scripts\activate    # Windows
+
+###Frontend Setup
+cd ui
+npm install
+npm start
+
+
+pip install -r requirements.txt
+
 
